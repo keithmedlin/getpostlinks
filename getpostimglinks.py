@@ -9,7 +9,7 @@ from selenium.webdriver.common.keys import Keys
 # You'll need to install the Chrome Web Driver and point this line to it. https://chromedriver.chromium.org/downloads
 browser = webdriver.Chrome('C:/Users/Keith/Documents/Python Scripts/chromedriver.exe')
 
-# You'll need to update this each time you run the script for a new folder at postimg.cc
+# You'll need to update this each time you run the script for a new folder in a Dropbox Shared Folder.
 url = "YOUR DROPBOX LINK HERE"
 
 # Regex to identify JUST the image files. This will pick up jpg, gif, png, but you can edit to your taste.
@@ -36,7 +36,7 @@ while no_of_pagedowns:
 soup = BeautifulSoup(browser.page_source, 'html.parser')
 
 # This line may need to be updated in the future if postimg.cc changes how they code the page.
-# If you're getting back garbage results...check to ensure this makes sense still using Chrom Dev Tools
+# If you're getting back garbage results...check to ensure this makes sense still using Chrome Dev Tools
 thumbs = soup.find_all("a", class_="sl-link sl-link--file")
 
 # Get the appropriate element
