@@ -45,4 +45,4 @@ for thumb in thumbs:
 
 # just print out the actual link that we're looking for to create our spreadsheet.
 for link in urllist:
-  print(reg.search(link).group())
+  print(reg.search(link).group()+"?raw=1")
